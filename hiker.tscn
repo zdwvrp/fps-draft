@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://b07rfha18ckpf"]
+
+[ext_resource type="Script" path="res://hiker.gd" id="1_mlbvc"]
+[ext_resource type="Script" path="res://ContextComponent.gd" id="2_671yx"]
+[ext_resource type="Texture2D" path="res://assets/kenney_input-prompts_1.4/Keyboard & Mouse/Default/keyboard_e.png" id="3_0vdrj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jq6o2"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_mlbvc")
+
+[node name="Standing_Collision_Shape" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jq6o2")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="TwistPivot" type="Node3D" parent="Head"]
+
+[node name="PitchPivot" type="Node3D" parent="Head/TwistPivot"]
+
+[node name="Camera3D" type="Camera3D" parent="Head/TwistPivot/PitchPivot"]
+
+[node name="Interact_Ray" type="RayCast3D" parent="Head/TwistPivot/PitchPivot"]
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 2
+
+[node name="Standing_Ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+target_position = Vector3(0, 2.1, 0)
+
+[node name="Crouching_Ray" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+target_position = Vector3(0, 1.3, 0)
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ContextComponent" type="CenterContainer" parent="UserInterface" node_paths=PackedStringArray("icon", "context")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -77.5
+offset_top = 62.51
+offset_right = 77.5
+offset_bottom = 85.51
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_671yx")
+icon = NodePath("HBoxContainer/TextureRect")
+context = NodePath("HBoxContainer/Label")
+default_icon = ExtResource("3_0vdrj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UserInterface/ContextComponent"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/ContextComponent/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UserInterface/ContextComponent/HBoxContainer"]
+layout_mode = 2
+text = "[Interact Text Here]"
+
+[node name="CenterContainer" type="CenterContainer" parent="UserInterface"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,167 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpmg0u6svudrs"]
+
+[sub_resource type="GDScript" id="GDScript_am01y"]
+script/source = "class_name Backpack extends Item
+
+# Parent Properties
+# var id: int = 0
+# var usid: String = \"backpack_0\"
+
+# Class Properties
+var hotbar_slots: int = 0
+var hotbar_slot_map: Array = []
+var max_storage: float = 0.0
+var min_storage: int = 0.0 # Why not
+var backpack_class: String = \"\"
+var stability: String = \"\"
+var flexibility: String = \"\"
+var quality: String = \"\"
+var comfortability: String = \"\"
+var has_quick_access_loop: bool = false
+var has_backpack_straps: bool = true # Something
+
+const backpack_map = [
+	{
+		\"item_id\": 1,
+		\"collection_id\": 0,
+		\"usid\": \"Placeholder Backpack\"
+	},
+	{
+		\"item_id\": 1,
+		\"collection_id\": 1,
+		\"usid\": \"Default Pack\",
+		\"hotbar_slots\": 4,
+		\"hotbar_slot_map\": [],
+		\"max_storage\": 40,
+		\"min_storage\": 0,
+		\"class\": \"medium\",
+		\"stability\": \"medium\",
+		\"flexibility\": \"medium\",
+		\"quality\": \"medium\",
+		\"comfortability\": \"medium\",
+		\"has_loop\": false,
+		\"waterproof_level\": 1
+	},
+	{
+		\"item_id\": 1,
+		\"collection_id\": 2,
+		\"usid\": \"School Pack\",
+		\"hotbar_slots\": 4,
+		\"hotbar_slot_map\": [],
+		\"max_storage\": 35,
+		\"min_storage\": 0,
+		\"class\": \"small\",
+		\"stability\": \"low\",
+		\"flexibility\": \"high\",
+		\"quality\": \"medium\",
+		\"comfortability\": \"low\",
+		\"has_loop\": true,
+		\"waterproof_level\": 2
+	}
+]
+
+# Called when an instance of this class is initialized.
+# Invoke with Backpack.new(params)
+func _init(id):
+	var new_backpack_properties = backpack_map[id]
+	var super_properties = {
+		\"is_interactable\": true,
+		\"item_id\": new_backpack_properties[\"item_id\"],
+		\"collection_id\": new_backpack_properties[\"collection_id\"],
+		\"usid\": new_backpack_properties[\"usid\"]
+	}
+	
+	if !new_backpack_properties:
+		# PUT LOG HERE
+		new_backpack_properties = backpack_map[0]
+	
+	# Instantiate properties
+	super(super_properties)
+	set_hotbar_slots(new_backpack_properties[\"hotbar_slots\"])
+	set_hotbar_slot_map(new_backpack_properties[\"hotbar_slot_map\"])
+	set_max_storage(new_backpack_properties[\"max_storage\"])
+	set_min_storage(new_backpack_properties[\"min_storage\"])
+	set_backpack_class(new_backpack_properties[\"backpack_class\"])
+	set_stability(new_backpack_properties[\"stability\"])
+	set_flexibility(new_backpack_properties[\"flexibility\"])
+	set_quality(new_backpack_properties[\"quality\"])
+	set_comfortability(new_backpack_properties[\"comfortability\"])
+	set_has_quick_access_loop(new_backpack_properties[\"has_quick_access_loop\"])
+	set_has_backpack_straps(new_backpack_properties[\"has_backpack_straps\"])
+	
+
+
+# GETTERS #
+func get_hotbar_slots() -> int:
+	return hotbar_slots
+func get_hotbar_slot_map() -> Array:
+	return hotbar_slot_map
+func get_max_storage() -> float:
+	return max_storage
+func get_min_storage() -> float:
+	return min_storage
+func get_backpack_class() -> String:
+	return backpack_class
+func get_stability() -> String:
+	return stability
+func get_flexibility() -> String:
+	return flexibility
+func get_quality() -> String:
+	return quality
+func get_comfortability() -> String:
+	return comfortability
+func get_has_quick_access_loop() -> bool:
+	return has_quick_access_loop
+func get_has_backpack_straps() -> bool:
+	return has_backpack_straps
+
+
+# SETTERS #
+func set_hotbar_slots(new):
+	hotbar_slots = new
+func set_hotbar_slot_map(new):
+	# Come back to this
+	hotbar_slot_map = new
+func set_max_storage(new):
+	max_storage = new
+func set_min_storage(new):
+	min_storage = new
+func set_backpack_class(new):
+	backpack_class = new
+func set_stability(new):
+	stability = new
+func set_flexibility(new):
+	flexibility = new
+func set_quality(new):
+	quality = new
+func set_comfortability(new):
+	comfortability = new
+func set_has_quick_access_loop(new):
+	has_quick_access_loop = new
+func set_has_backpack_straps(new):
+	has_backpack_straps = new
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wxkw0"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j11ht"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_17oi1"]
+material = SubResource("StandardMaterial3D_j11ht")
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Backpack" type="Node3D"]
+script = SubResource("GDScript_am01y")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_wxkw0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_17oi1")
+skeleton = NodePath("../..")
