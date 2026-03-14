@@ -1,4 +1,4 @@
-class_name Hiker extends CharacterBody3D
+class_name Player_Controller extends CharacterBody3D
 
 # Node definitions
 @onready var collision_shape := $Standing_Collision_Shape

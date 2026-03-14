@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b07rfha18ckpf"]
 
-[ext_resource type="Script" uid="uid://bc8fwjh1kvgo0" path="res://hiker.gd" id="1_mlbvc"]
+[ext_resource type="Script" uid="uid://bc8fwjh1kvgo0" path="res://player_controller.gd" id="1_mlbvc"]
 [ext_resource type="Script" uid="uid://cknyvn7rt0nd3" path="res://ContextComponent.gd" id="2_671yx"]
 [ext_resource type="Texture2D" uid="uid://dp1venyukcsrp" path="res://assets/kenney_input-prompts_1.4/Keyboard & Mouse/Default/keyboard_e.png" id="3_0vdrj"]
 
