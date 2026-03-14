@@ -1,8 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdk8ajni0fpy6"]
+[gd_scene format=3 uid="uid://bdk8ajni0fpy6"]
 
-[ext_resource type="PackedScene" uid="uid://b07rfha18ckpf" path="res://hiker.tscn" id="1_earob"]
 [ext_resource type="Texture2D" uid="uid://cus8iyscvy35h" path="res://textures/texture_07.png" id="1_xss1f"]
-[ext_resource type="PackedScene" uid="uid://yiws6nhvutaa" path="res://backpack.tscn" id="2_l6v0x"]
+[ext_resource type="PackedScene" uid="uid://dr07yrvqkvsfu" path="res://gun.tscn" id="2_l6v0x"]
+[ext_resource type="PackedScene" uid="uid://b07rfha18ckpf" path="res://hiker.tscn" id="4_rvmsc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yjayp"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -47,108 +47,108 @@ size = Vector3(2, 0.5, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gb83e"]
 data = PackedVector3Array(-1, 0.25, 0.5, 1, -0.25, 0.5, -1, -0.25, 0.5, -1, 0.25, -0.5, -1, -0.25, -0.5, 1, -0.25, -0.5, -1, 0.25, 0.5, -1, 0.25, -0.5, 1, -0.25, 0.5, -1, 0.25, -0.5, 1, -0.25, -0.5, 1, -0.25, 0.5, -1, 0.25, -0.5, -1, 0.25, 0.5, -1, -0.25, -0.5, -1, 0.25, 0.5, -1, -0.25, 0.5, -1, -0.25, -0.5, -1, -0.25, 0.5, 1, -0.25, 0.5, -1, -0.25, -0.5, 1, -0.25, 0.5, 1, -0.25, -0.5, -1, -0.25, -0.5)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=1806632123]
 
-[node name="environment" type="Node3D" parent="."]
+[node name="environment" type="Node3D" parent="." unique_id=980535627]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="environment" unique_id=745269215]
 environment = SubResource("Environment_5n7yv")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="environment/WorldEnvironment"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="environment/WorldEnvironment" unique_id=1892519123]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="stage" type="Node3D" parent="."]
+[node name="stage" type="Node3D" parent="." unique_id=478871935]
 
-[node name="Spawn_Floor" type="CSGBox3D" parent="stage"]
+[node name="Spawn_Floor" type="CSGBox3D" parent="stage" unique_id=1935735821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
 size = Vector3(30, 1, 30)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Lil_Slope_Floor" type="CSGBox3D" parent="stage"]
+[node name="Lil_Slope_Floor" type="CSGBox3D" parent="stage" unique_id=1598729245]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 34.1556)
 use_collision = true
 size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Lil_Slope_Recovery_Floor" type="CSGBox3D" parent="stage"]
+[node name="Lil_Slope_Recovery_Floor" type="CSGBox3D" parent="stage" unique_id=1876380930]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 19.795)
 use_collision = true
 size = Vector3(20, 1, 20)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Lil_Slope_Recovery_Railing" type="CSGBox3D" parent="stage"]
+[node name="Lil_Slope_Recovery_Railing" type="CSGBox3D" parent="stage" unique_id=110736813]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.482, -0.7442, 19.578)
 use_collision = true
 size = Vector3(1, 1.5, 9.144)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Lil_Slope_Recovery_Railing_2" type="CSGBox3D" parent="stage"]
+[node name="Lil_Slope_Recovery_Railing_2" type="CSGBox3D" parent="stage" unique_id=434943349]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.46604, -0.7442, 19.578)
 use_collision = true
 size = Vector3(1, 1.5, 9.144)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Crouch_Floor" type="CSGBox3D" parent="stage"]
+[node name="Crouch_Floor" type="CSGBox3D" parent="stage" unique_id=1234050158]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -9.701, 2, 0)
 use_collision = true
 size = Vector3(10, 1, 5)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Crouch_Floor2" type="CSGBox3D" parent="stage"]
+[node name="Crouch_Floor2" type="CSGBox3D" parent="stage" unique_id=986809251]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -5.54003, 1, 3.22105)
 use_collision = true
 size = Vector3(1, 2, 1)
 material = SubResource("StandardMaterial3D_3e55g")
 
-[node name="Big_Slope" type="Node3D" parent="stage"]
+[node name="Big_Slope" type="Node3D" parent="stage" unique_id=1795021815]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.55024, -0.250875, 20.0645)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Big_Slope"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Big_Slope" unique_id=1877430649]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.90549, -0.993825, -2.80921)
 mesh = SubResource("PrismMesh_bpd5a")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="stage/Big_Slope/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/Big_Slope/MeshInstance3D" unique_id=404936529]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Big_Slope/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Big_Slope/MeshInstance3D/StaticBody3D" unique_id=1615955202]
 shape = SubResource("ConcavePolygonShape3D_43the")
 
-[node name="Big_Slope_2" type="Node3D" parent="stage"]
+[node name="Big_Slope_2" type="Node3D" parent="stage" unique_id=563197392]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.48139, -1.25, 16.2322)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Big_Slope_2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Big_Slope_2" unique_id=360909657]
 mesh = SubResource("PrismMesh_bpd5a")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="stage/Big_Slope_2/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/Big_Slope_2/MeshInstance3D" unique_id=1013550730]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Big_Slope_2/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Big_Slope_2/MeshInstance3D/StaticBody3D" unique_id=1417296248]
 shape = SubResource("ConcavePolygonShape3D_fwgmk")
 
-[node name="Lil_Slope" type="Node3D" parent="stage"]
+[node name="Lil_Slope" type="Node3D" parent="stage" unique_id=1967159442]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.23074, 0.25, 14)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Lil_Slope"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Lil_Slope" unique_id=619470082]
 mesh = SubResource("PrismMesh_hht58")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="stage/Lil_Slope/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/Lil_Slope/MeshInstance3D" unique_id=429929782]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Lil_Slope/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Lil_Slope/MeshInstance3D/StaticBody3D" unique_id=763041497]
 shape = SubResource("ConcavePolygonShape3D_gb83e")
 
-[node name="Lil_Slope_2" type="Node3D" parent="stage"]
+[node name="Lil_Slope_2" type="Node3D" parent="stage" unique_id=850795915]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 4.52672, 0.25, 25.1619)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Lil_Slope_2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stage/Lil_Slope_2" unique_id=1659035396]
 mesh = SubResource("PrismMesh_hht58")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="stage/Lil_Slope_2/MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="stage/Lil_Slope_2/MeshInstance3D" unique_id=1550528560]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Lil_Slope_2/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stage/Lil_Slope_2/MeshInstance3D/StaticBody3D" unique_id=1060609679]
 shape = SubResource("ConcavePolygonShape3D_gb83e")
 
-[node name="Backpack" parent="stage" instance=ExtResource("2_l6v0x")]
+[node name="Gun" parent="stage" unique_id=608898194 instance=ExtResource("2_l6v0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3815, 0.722497, 6.26519)
 
-[node name="hiker" parent="." instance=ExtResource("1_earob")]
-transform = Transform3D(-0.901908, 0, 0.431928, 0, 1, 0, -0.431928, 0, -0.901908, 0, 1, 0)
+[node name="Player_Node" parent="." unique_id=859322649 instance=ExtResource("4_rvmsc")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 2, 0)

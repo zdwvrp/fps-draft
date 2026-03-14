@@ -1,6 +1,6 @@
 extends Item
 
-class_name Backpack
+class_name Gun
 
 # Parent Properties
 # var id: int = 0
@@ -64,7 +64,7 @@ const backpack_map = [
 
 # Called when an instance of this class is initialized.
 # Invoke with Backpack.new(params)
-func _init(id):
+func _init(id: int = 1):
 	print("Init backpack!")
 	var new_backpack_properties = backpack_map[id]
 	var super_properties = {

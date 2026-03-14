@@ -10,7 +10,7 @@ class_name Hiker extends CharacterBody3D
 @onready var interact_ray := $Head/TwistPivot/PitchPivot/Interact_Ray
 
 # Import Script Classes
-# const Backpack = preload("res://backpack.gd")
+# const Gun = preload("res://gun.gd")
 
 # Mouse & Camera Variables
 var mouse_sensitivity := 0.1
@@ -73,14 +73,14 @@ var can_interact = false # Set this to true if a ray shooting out of the camera 
 
 
 ################################
-##          Backpack          ##
+##          Gun          ##
 ################################
 
-var backpack: Backpack = null # For now, null means no backpack. May want to create a "backpack 0" that can be used for this.
+var gun: Gun = null # For now, null means no gun. May want to create a "gun 0" that can be used for this.
 var current_weight = 0 # Cumulative weight of all items in inventory.
 var inventory = [] # Stores an array of objects that are currently in the player's inventory.
 
-const Backpack_Scene = preload("res://backpack.tscn")
+const Gun_Scene = preload("res://gun.tscn")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # Hide mouse cursor
@@ -150,17 +150,17 @@ func _process(_delta):
 	if (can_interact):
 		var collision = interact_ray.get_collider()
 		if collision != null:
-			if collision.get_parent().name == "Backpack":
-				GlobalScript.ui_context.update_content("Equip Backpack")
+			if collision.get_parent().name == "Gun":
+				GlobalScript.ui_context.update_content("Equip Gun")
 				GlobalScript.ui_context.update_icon(GlobalScript.ui_context.default_icon, true)
 				if Input.is_action_just_pressed("equip"):
-					equip_backpack(collision.get_parent().get_collection_id(), collision.get_parent())
+					equip_gun(collision.get_parent().get_collection_id(), collision.get_parent())
 			# print(collision.get_parent().name) # For testings
 	else:
 		GlobalScript.ui_context.reset()
 	
-	if (backpack != null and Input.is_action_just_pressed("unequip_backpack")):
-		unequip_backpack()
+	if (gun != null and Input.is_action_just_pressed("drop_gun")):
+		drop_gun()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -205,12 +205,12 @@ func get_movement_state(type: String):
 	else:
 		return -1
 
-func equip_backpack(id: int, obj):
-	print("equip_backpack")
-	var new_backpack = Backpack.new(id)
-	if new_backpack.collection_id > 0:
-		# We can equip this backpack
-		backpack = Backpack.new(id)
+func equip_gun(id: int, obj):
+	print("equip_gun")
+	var new_gun = Gun.new(id)
+	if new_gun.collection_id > 0:
+		# We can equip this gun
+		gun = Gun.new(id)
 		# obj.get_parent().queue_free()
 		obj.queue_free()
 		return 1
@@ -218,11 +218,11 @@ func equip_backpack(id: int, obj):
 		# PUT LOG HERE
 		return -1
 
-func unequip_backpack():
-	print("unequip_backpack")
-	if backpack != null:
-		var backpack_node = Backpack_Scene.instantiate()
-		backpack_node.position = head.global_position - (head.global_transform.basis.z * 1.5) # Needs work
+func drop_gun():
+	print("drop_gun")
+	if gun != null:
+		var gun_node = Gun_Scene.instantiate()
+		gun_node.position = head.global_position - (head.global_transform.basis.z * 1.5) # Needs work
 		print("head.transform.basis.z: ", head.transform.basis.z)
-		get_parent().add_child(backpack_node)
-		backpack = null
+		get_parent().add_child(gun_node)
+		gun = null

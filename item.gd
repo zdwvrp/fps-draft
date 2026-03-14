@@ -4,7 +4,7 @@ var item_id: int = 0 # What collection is this item from?
 var collection_id: int = 0 # Id of this item in it's collection
 var usid: String = ""
 
-const item_id_collections_map: Array = ["null", "backpack"] # String representation of item_id
+const item_id_collections_map: Array = ["null", "gun"] # String representation of item_id
 
 # Called when the node enters the scene tree for the first time.
 func _init(args):
