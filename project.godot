@@ -15,12 +15,13 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Codename: Backpacker"
+run/main_scene="uid://b07rfha18ckpf"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalScript="*res://global_script.gd"
+GlobalScript="*res://scripts/global_script.gd"
 
 [display]
 

@@ -1,0 +1,22 @@
+[
+  {
+	"name": "TEST1",
+	"rarity": "common",
+	"image": "res://assets/cardImages/TEST1.png"
+  },
+  {
+	"name": "TEST2",
+	"rarity": "mythic",
+	"image": "res://assets/cardImages/TEST2.png"
+  },
+  {
+	"name": "TEST3",
+	"rarity": "rare",
+	"image": "res://assets/cardImages/TEST3.png"
+  },
+  {
+	"name": "TEST4",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/TEST4.png"
+  }
+]

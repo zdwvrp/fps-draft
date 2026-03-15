@@ -80,7 +80,7 @@ var gun: Gun = null # For now, null means no gun. May want to create a "gun 0" t
 var current_weight = 0 # Cumulative weight of all items in inventory.
 var inventory = [] # Stores an array of objects that are currently in the player's inventory.
 
-const Gun_Scene = preload("res://gun.tscn")
+const Gun_Scene = preload("res://scenes/gun.tscn")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) # Hide mouse cursor
