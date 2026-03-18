@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalScript="*res://scripts/global_script.gd"
+CardDatabase="*uid://cm15lm2slxre1"
 
 [display]
 
