@@ -18,5 +18,20 @@
 	"name": "TEST4",
 	"rarity": "uncommon",
 	"image": "res://assets/cardImages/TEST4.png"
+  },
+  {
+	"name": "TEST5",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/TEST4.png"
+  },
+  {
+	"name": "TEST6",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/TEST4.png"
+  },
+  {
+	"name": "TEST7",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/TEST4.png"
   }
 ]

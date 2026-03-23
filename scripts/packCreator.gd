@@ -1,11 +1,28 @@
 extends Node
 
+#here just for testing purposes
+func _ready():
+	createPack()
+
+#this needs to be tweaked obviously, but it works
+#also figured out why testing wasnt working, scripts must be attached to nodes to work with the "output" tab below, so i made a test node
 
 func createPack():
+	
+	#new variable "pack" is the final array before showing the player what they got
 	var pack = []
 	
-	#to be coded... i'll probably need your help here Zach (i do have a basic idea)
-	#something like shuffle rarity arrays from cardDatabase, put x number of cards from each rarity array into new "pack" array, print pack
-	#was playing around a bit and found out i needed to make CardDatabase an autoloaded, global script/variable so that it could be used in other scripts, so that is done
-	#see: Project > Project Settings > Globals
-	#was also having a tough time figuring out how to test my code in the output tab, might need some help there
+	#shuffle the arrays with all the cards (sorted by rarity) from the JSON file
+	CardDatabase.commons.shuffle()
+	CardDatabase.uncommons.shuffle()
+	CardDatabase.rares.shuffle()
+	CardDatabase.mythics.shuffle()
+	
+	#takes the first selection from each rarity array puts it into the new "pack" array
+	pack += CardDatabase.commons.slice(0,1)
+	pack += CardDatabase.uncommons.slice(0,1)
+	pack += CardDatabase.rares.slice(0,1)
+	pack += CardDatabase.mythics.slice(0,1)
+	
+	#prints pack array, just for testing currently?
+	print(pack)
