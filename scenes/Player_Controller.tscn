@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bc8fwjh1kvgo0" path="res://scripts/player_controller.gd" id="1_mlbvc"]
 [ext_resource type="Script" uid="uid://cknyvn7rt0nd3" path="res://scripts/ContextComponent.gd" id="2_671yx"]
 [ext_resource type="Texture2D" uid="uid://dp1venyukcsrp" path="res://assets/kenney_input-prompts_1.4/Keyboard & Mouse/Default/keyboard_e.png" id="3_0vdrj"]
+[ext_resource type="Theme" uid="uid://cjah647h0bfs2" path="res://themes/debugTheme.tres" id="4_42wj6"]
+[ext_resource type="Script" uid="uid://u4ckn602nbuw" path="res://scripts/debug_panel.gd" id="5_cclxt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jq6o2"]
 
@@ -55,9 +57,9 @@ offset_bottom = 85.51
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_671yx")
+default_icon = ExtResource("3_0vdrj")
 icon = NodePath("HBoxContainer/TextureRect")
 context = NodePath("HBoxContainer/Label")
-default_icon = ExtResource("3_0vdrj")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UserInterface/ContextComponent" unique_id=2017193557]
 layout_mode = 2
@@ -74,3 +76,18 @@ text = "[Interact Text Here]"
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="DebugPanel" type="PanelContainer" parent="UserInterface" unique_id=1863485104]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 15.0
+offset_right = 630.0
+offset_bottom = 55.0
+theme = ExtResource("4_42wj6")
+script = ExtResource("5_cclxt")
+
+[node name="MarginContainer" type="MarginContainer" parent="UserInterface/DebugPanel" unique_id=477336337]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/DebugPanel/MarginContainer" unique_id=1674443507]
+layout_mode = 2
