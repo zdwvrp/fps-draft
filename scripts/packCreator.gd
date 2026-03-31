@@ -1,4 +1,4 @@
-extends Node
+class_name packCreator extends Node
 
 #here just for testing purposes
 func _ready():
@@ -25,4 +25,4 @@ func createPack():
 	pack += CardDatabase.mythics.slice(0,1)
 	
 	#prints pack array, just for testing currently?
-	print(pack)
+	return pack

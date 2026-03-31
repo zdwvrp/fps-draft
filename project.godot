@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 GlobalScript="*res://scripts/global_script.gd"
 CardDatabase="*uid://cm15lm2slxre1"
+PackCreator="*uid://bsfvv48xytkqr"
 
 [display]
 
