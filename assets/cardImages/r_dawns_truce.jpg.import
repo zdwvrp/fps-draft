@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7r6bwphf05vh"
-path="res://.godot/imported/rareTest.jpg-447b2a43a8eb3112ce1946297a98ba19.ctex"
+uid="uid://b0s1qqgx8dy7f"
+path="res://.godot/imported/r_dawns_truce.jpg-1e276b3d65857a784f56b3a45b122b17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardImages/rareTest.jpg"
-dest_files=["res://.godot/imported/rareTest.jpg-447b2a43a8eb3112ce1946297a98ba19.ctex"]
+source_file="res://assets/cardImages/r_dawns_truce.jpg"
+dest_files=["res://.godot/imported/r_dawns_truce.jpg-1e276b3d65857a784f56b3a45b122b17.ctex"]
 
 [params]
 

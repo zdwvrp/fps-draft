@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn6bo7eml4uai"
-path="res://.godot/imported/mythicTest.jpg-fe3a8335d8a0d0b6f4fe558b218f35d3.ctex"
+uid="uid://bk00fy7yq83wj"
+path="res://.godot/imported/c_mulldrifter.jpg-ca89fa18d772095881ad33e2f3a7eab6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardImages/mythicTest.jpg"
-dest_files=["res://.godot/imported/mythicTest.jpg-fe3a8335d8a0d0b6f4fe558b218f35d3.ctex"]
+source_file="res://assets/cardImages/c_mulldrifter.jpg"
+dest_files=["res://.godot/imported/c_mulldrifter.jpg-ca89fa18d772095881ad33e2f3a7eab6.ctex"]
 
 [params]
 

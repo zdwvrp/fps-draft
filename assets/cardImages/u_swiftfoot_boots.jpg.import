@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlhgqe2bvg8cm"
-path="res://.godot/imported/commonTest.jpg-749b159c62a47e8abe20ea15366f39ff.ctex"
+uid="uid://c1feupfn51hbp"
+path="res://.godot/imported/u_swiftfoot_boots.jpg-c5219f500c742158a4b332f77abc0477.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardImages/commonTest.jpg"
-dest_files=["res://.godot/imported/commonTest.jpg-749b159c62a47e8abe20ea15366f39ff.ctex"]
+source_file="res://assets/cardImages/u_swiftfoot_boots.jpg"
+dest_files=["res://.godot/imported/u_swiftfoot_boots.jpg-c5219f500c742158a4b332f77abc0477.ctex"]
 
 [params]
 

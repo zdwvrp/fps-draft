@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqybo7xflmdld"
-path="res://.godot/imported/uncommonTest.jpg-5f12e6c8bb500ee01d237cb1ec239947.ctex"
+uid="uid://lcv1aaie0fyg"
+path="res://.godot/imported/c_ghostly_flicker.jpg-a419f55fffb8786445d487b4735c8344.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cardImages/uncommonTest.jpg"
-dest_files=["res://.godot/imported/uncommonTest.jpg-5f12e6c8bb500ee01d237cb1ec239947.ctex"]
+source_file="res://assets/cardImages/c_ghostly_flicker.jpg"
+dest_files=["res://.godot/imported/c_ghostly_flicker.jpg-a419f55fffb8786445d487b4735c8344.ctex"]
 
 [params]
 

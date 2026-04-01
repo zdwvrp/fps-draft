@@ -1,37 +1,140 @@
 [
   {
-	"name": "TEST1",
+	"id": 1,
+	"name": "Village Rites",
 	"rarity": "common",
-	"image": "res://assets/cardImages/commonTest.jpg"
+	"image": "res://assets/cardImages/c_village_rites.jpg"
   },
   {
-	"name": "TEST2",
-	"rarity": "mythic",
-	"image": "res://assets/cardImages/mythicTest.jpg"
+	"id": 2,
+	"name": "Counterspell",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_counterspell.jpg"
   },
   {
-	"name": "TEST3",
+	"id": 3,
+	"name": "Spore Frog",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_spore_frog.jpg"
+  },
+  {
+	"id": 4,
+	"name": "Ephemerate",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_ephemerate.jpg"
+  },
+  {
+	"id": 5,
+	"name": "Embiggen",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_embiggen.jpg"
+  },
+  {
+	"id": 6,
+	"name": "Thrill of Possibility",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_thrill_of_possibility.jpg"
+  },
+  {
+	"id": 7,
+	"name": "Ghostly Flicker",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_ghostly_flicker.jpg"
+  },
+  {
+	"id": 8,
+	"name": "Path to Exile",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_path_to_exile.jpg"
+  },
+  {
+	"id": 9,
+	"name": "Bojuka Bog",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_bojuka_bog.jpg"
+  },
+  {
+	"id": 10,
+	"name": "Simian Spirit Guide",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_simian_spirit_guide.jpg"
+  },
+  {
+	"id": 11,
+	"name": "Mulldrifter",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_mulldrifter.jpg"
+  },
+  {
+	"id": 12,
+	"name": "Zuko's Exile",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_zukos_exile.jpg"
+  },
+  {
+	"id": 13,
+	"name": "Worldly Tutor",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/u_worldly_tutor.jpg"
+  },
+  {
+	"id": 14,
+	"name": "Baleful Strix",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/u_baleful_strix.jpg"
+  },
+  {
+	"id": 15,
+	"name": "Sol Ring",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/u_sol_ring.jpg"
+  },
+  {
+	"id": 16,
+	"name": "Rogue's Passage",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/u_rogues_passage.jpg"
+  },
+  {
+	"id": 17,
+	"name": "Swiftfoot Boots",
+	"rarity": "uncommon",
+	"image": "res://assets/cardImages/u_swiftfoot_boots.jpg"
+  },
+  {
+	"id": 18,
+	"name": "Stomping Ground",
 	"rarity": "rare",
-	"image": "res://assets/cardImages/rareTest.jpg"
+	"image": "res://assets/cardImages/r_stomping_ground.jpg"
   },
   {
-	"name": "TEST4",
-	"rarity": "uncommon",
-	"image": "res://assets/cardImages/uncommonTest.jpg"
+	"id": 19,
+	"name": "Blasphemous Act",
+	"rarity": "rare",
+	"image": "res://assets/cardImages/r_blasphemous_act.jpg"
   },
   {
-	"name": "TEST5",
-	"rarity": "uncommon",
-	"image": "res://assets/cardImages/uncommonTest.jpg"
+	"id": 20,
+	"name": "Rin and Seri, Inseperable",
+	"rarity": "mythic",
+	"image": "res://assets/cardImages/m_rin_and_seri.jpg"
   },
   {
-	"name": "TEST6",
-	"rarity": "uncommon",
-	"image": "res://assets/cardImages/uncommonTest.jpg"
+	"id": 21,
+	"name": "Faithless Looting",
+	"rarity": "common",
+	"image": "res://assets/cardImages/c_faithless_looting.jpg"
   },
   {
-	"name": "TEST7",
-	"rarity": "uncommon",
-	"image": "res://assets/cardImages/uncommonTest.jpg"
-  }
+	"id": 22,
+	"name": "Mathemagics",
+	"rarity": "mythic",
+	"image": "res://assets/cardImages/m_mathemagics.jpg"
+  },
+  {
+	"id": 23,
+	"name": "Dawn's Truce",
+	"rarity": "rare",
+	"image": "res://assets/cardImages/r_dawns_truce.jpg"
+  },
 ]

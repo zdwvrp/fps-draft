@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://iabm2emkmhfb" path="res://scripts/draft_screen.gd" id="1_rhp8w"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rhp8w"]
+
 [node name="DraftScreen" type="Control" unique_id=732846906]
 layout_mode = 3
 anchors_preset = 15
@@ -11,30 +13,130 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rhp8w")
 
-[node name="Button" type="TextureButton" parent="." unique_id=145126034]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 264.0
-offset_right = 821.0
-offset_bottom = 743.0
+[node name="Player3DPart" type="Node3D" parent="." unique_id=421516311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+visible = false
 
-[node name="Button4" type="TextureButton" parent="." unique_id=599194530]
-layout_mode = 0
-offset_left = 1490.0
-offset_top = 218.0
-offset_right = 1858.0
-offset_bottom = 781.0
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player3DPart" unique_id=57493581]
+mesh = SubResource("CapsuleMesh_rhp8w")
 
-[node name="Button2" type="TextureButton" parent="." unique_id=1783967149]
-layout_mode = 0
-offset_left = 933.0
-offset_top = 249.0
-offset_right = 1335.0
-offset_bottom = 800.0
+[node name="Camera3D" type="Camera3D" parent="Player3DPart" unique_id=1162074462]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -1.5989432)
 
-[node name="Button3" type="TextureButton" parent="." unique_id=739759429]
+[node name="PlayerModel" type="SubViewport" parent="." unique_id=1961694404]
+
+[node name="CardSection" type="Control" parent="." unique_id=482814163]
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 1080.0
+scale = Vector2(1.004, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CardSection" unique_id=394128910]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 246.0
-offset_right = 432.0
-offset_bottom = 766.0
+offset_right = 1080.0
+offset_bottom = 1080.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardSection/MarginContainer" unique_id=2107082604]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CardSection/MarginContainer/VBoxContainer" unique_id=1742508108]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Button5" type="Button" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1976103371]
+visible = false
+custom_minimum_size = Vector2(180, 292)
+layout_mode = 2
+localize_numeral_system = false
+
+[node name="TextureRect" type="TextureRect" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer/Button5" unique_id=1546640871]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 292.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button6" type="Button" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1331605422]
+visible = false
+custom_minimum_size = Vector2(180, 292)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer/Button6" unique_id=93811516]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 292.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button7" type="Button" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1521367295]
+visible = false
+custom_minimum_size = Vector2(180, 292)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer/Button7" unique_id=308160239]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 292.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button8" type="Button" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1579776131]
+visible = false
+custom_minimum_size = Vector2(180, 292)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer/Button8" unique_id=1902182947]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 292.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button9" type="Button" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer" unique_id=547204072]
+visible = false
+custom_minimum_size = Vector2(180, 292)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CardSection/MarginContainer/VBoxContainer/HBoxContainer/Button9" unique_id=295110617]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 292.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="CardSection" unique_id=1688797369]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0.2509804)
+
+[node name="NoMansLand" type="Control" parent="." unique_id=1199174670]
+anchors_preset = 0
+offset_left = 1085.0
+offset_top = 1.0
+offset_right = 1125.0
+offset_bottom = 41.0
+
+[node name="ColorRect" type="ColorRect" parent="NoMansLand" unique_id=46775007]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 1080.0
+color = Color(0, 0.21176471, 0, 0.2509804)
+
+[node name="EquipmentSection" type="Control" parent="." unique_id=1272004149]
+anchors_preset = 0
+offset_left = 1383.0
+offset_top = 3.0
+offset_right = 1923.0
+offset_bottom = 1083.0
+
+[node name="ColorRect" type="ColorRect" parent="EquipmentSection" unique_id=994693947]
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 1080.0
+scale = Vector2(1.0005745, 1.0001162)
+color = Color(0.09411765, 0.3764706, 0.09411765, 0.5019608)

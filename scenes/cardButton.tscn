@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dw2lqlf4dcw2j"]
+
+[node name="Button" type="Button" unique_id=1840745912]
+custom_minimum_size = Vector2(180, 292)
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=323581554]
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 292.0
+expand_mode = 1
+stretch_mode = 5
